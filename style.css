@@ -1,0 +1,44 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #eef2ff;
+    padding: 30px;
+}
+
+h1 {
+    color: #4338ca;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    gap: 8px;
+    justify-content: center;
+    margin: 25px;
+}
+
+.board button {
+    width: 90px;
+    height: 90px;
+    font-size: 32px;
+    font-weight: bold;
+    border: 2px solid #6366f1;
+    border-radius: 10px;
+    background: white;
+    color: #4338ca;
+    cursor: pointer;
+}
+
+.board button:disabled {
+    cursor: not-allowed;
+}
+
+.reset {
+    padding: 12px 24px;
+    background: #4338ca;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe AI</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <h1>🎮 Tic Tac Toe AI</h1>
+    <h2>{{ message }}</h2>
+
+    <form method="POST">
+        <div class="board">
+            {% for cell in board %}
+                <button type="submit"
+                        name="cell"
+                        value="{{ loop.index0 }}"
+                        {% if cell != '-' or game_over %}disabled{% endif %}>
+                    {{ '' if cell == '-' else cell }}
+                </button>
+            {% endfor %}
+        </div>
+    </form>
+
+    <form method="POST">
+        <button type="submit" name="reset" value="1" class="reset">
+            New Game
+        </button>
+    </form>
+
+</body>
+</html>
